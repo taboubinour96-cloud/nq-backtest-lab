@@ -1,0 +1,5 @@
+cache/
+cache_yahoo/
+__pycache__/
+*.pyc
+.env

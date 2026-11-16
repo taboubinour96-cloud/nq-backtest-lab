@@ -1,0 +1,304 @@
+{
+  "cut": "2024-10-14",
+  "rules": {
+    "ema": 200,
+    "macd": [
+      12,
+      26,
+      9
+    ],
+    "atr": 14,
+    "sl_atr": 1.5,
+    "trail_atr": 3.0,
+    "risk_pct": 0.008,
+    "taker_per_side": 0.00055,
+    "slippage_per_side": 0.0001,
+    "entry": "signal on close of bar i-1, fill at open of bar i",
+    "exit": "ATR stop 1.5 / trailing 3.0 (moved with previous close only)"
+  },
+  "rules_hash": "fd46dc54c5c1a165",
+  "repro_6sym": {
+    "cut_date": "2024-10-14",
+    "design": {
+      "n": 223,
+      "pf": 2.552,
+      "win_rate_pct": 35.9,
+      "expectancy_R": 0.9188,
+      "net_R": 204.9,
+      "max_dd_R": -21.7,
+      "sample_verdict": "<400 غير موثوق بعد",
+      "stress_remove_best2_R": 132.69,
+      "stress_remove_best3_R": 110.68,
+      "top3_concentration_pct": 46.0
+    },
+    "blind": {
+      "n": 117,
+      "pf": 1.211,
+      "win_rate_pct": 29.9,
+      "expectancy_R": 0.1352,
+      "net_R": 15.8,
+      "max_dd_R": -20.1,
+      "sample_verdict": "<400 غير موثوق بعد",
+      "stress_remove_best2_R": 0.18,
+      "stress_remove_best3_R": -4.72,
+      "top3_concentration_pct": 129.8
+    },
+    "blind_confirms": false,
+    "verdict": "FAIL — الفترة المغلقة لم تؤكد التصميم",
+    "gate": {
+      "blind_PF>=1.3": false,
+      "blind_trades>=100": true,
+      "blind_trades>=400": false,
+      "survives_best3_removal": false
+    }
+  },
+  "portfolios": {
+    "crypto6": {
+      "judge": {
+        "cut_date": "2024-10-14",
+        "design": {
+          "n": 223,
+          "pf": 2.552,
+          "win_rate_pct": 35.9,
+          "expectancy_R": 0.9188,
+          "net_R": 204.9,
+          "max_dd_R": -21.7,
+          "sample_verdict": "<400 غير موثوق بعد",
+          "stress_remove_best2_R": 132.69,
+          "stress_remove_best3_R": 110.68,
+          "top3_concentration_pct": 46.0
+        },
+        "blind": {
+          "n": 117,
+          "pf": 1.211,
+          "win_rate_pct": 29.9,
+          "expectancy_R": 0.1352,
+          "net_R": 15.8,
+          "max_dd_R": -20.1,
+          "sample_verdict": "<400 غير موثوق بعد",
+          "stress_remove_best2_R": 0.18,
+          "stress_remove_best3_R": -4.72,
+          "top3_concentration_pct": 129.8
+        },
+        "blind_confirms": false,
+        "verdict": "FAIL — الفترة المغلقة لم تؤكد التصميم",
+        "gate": {
+          "blind_PF>=1.3": false,
+          "blind_trades>=100": true,
+          "blind_trades>=400": false,
+          "survives_best3_removal": false
+        }
+      },
+      "trades_per_month": 4.78,
+      "max_risk_pct": 0.498,
+      "expected_monthly_pct": 0.322,
+      "months_to_8pct": 24.9,
+      "income_25k": 64,
+      "income_200k": 514
+    },
+    "crypto24": {
+      "judge": {
+        "cut_date": "2024-10-14",
+        "design": {
+          "n": 700,
+          "pf": 1.704,
+          "win_rate_pct": 34.1,
+          "expectancy_R": 0.4198,
+          "net_R": 293.8,
+          "max_dd_R": -56.9,
+          "sample_verdict": "≥400 عيّنة يُعتمد عليها",
+          "stress_remove_best2_R": 221.65,
+          "stress_remove_best3_R": 199.64,
+          "top3_concentration_pct": 32.1
+        },
+        "blind": {
+          "n": 453,
+          "pf": 1.347,
+          "win_rate_pct": 26.7,
+          "expectancy_R": 0.2322,
+          "net_R": 105.2,
+          "max_dd_R": -74.0,
+          "sample_verdict": "≥400 عيّنة يُعتمد عليها",
+          "stress_remove_best2_R": 8.77,
+          "stress_remove_best3_R": -1.2,
+          "top3_concentration_pct": 101.1
+        },
+        "blind_confirms": true,
+        "verdict": "PASS — الفترة المغلقة تؤكد التصميم",
+        "gate": {
+          "blind_PF>=1.3": true,
+          "blind_trades>=100": true,
+          "blind_trades>=400": true,
+          "survives_best3_removal": false
+        }
+      },
+      "trades_per_month": 18.51,
+      "max_risk_pct": 0.135,
+      "expected_monthly_pct": 0.581,
+      "months_to_8pct": 13.8,
+      "income_25k": 116,
+      "income_200k": 929
+    },
+    "classic10": {
+      "judge": {
+        "cut_date": "2024-10-14",
+        "design": {
+          "n": 1367,
+          "pf": 1.517,
+          "win_rate_pct": 33.4,
+          "expectancy_R": 0.3095,
+          "net_R": 423.1,
+          "max_dd_R": -28.6,
+          "sample_verdict": "≥400 عيّنة يُعتمد عليها",
+          "stress_remove_best2_R": 381.78,
+          "stress_remove_best3_R": 363.66,
+          "top3_concentration_pct": 14.0
+        },
+        "blind": {
+          "n": 141,
+          "pf": 1.252,
+          "win_rate_pct": 28.4,
+          "expectancy_R": 0.161,
+          "net_R": 22.7,
+          "max_dd_R": -17.7,
+          "sample_verdict": "<400 غير موثوق بعد",
+          "stress_remove_best2_R": -7.49,
+          "stress_remove_best3_R": -15.38,
+          "top3_concentration_pct": 167.7
+        },
+        "blind_confirms": false,
+        "verdict": "FAIL — الفترة المغلقة لم تؤكد التصميم",
+        "gate": {
+          "blind_PF>=1.3": false,
+          "blind_trades>=100": true,
+          "blind_trades>=400": false,
+          "survives_best3_removal": false
+        }
+      },
+      "trades_per_month": 5.7,
+      "max_risk_pct": 0.565,
+      "expected_monthly_pct": 0.518,
+      "months_to_8pct": 15.4,
+      "income_25k": 104,
+      "income_200k": 829
+    },
+    "mixed": {
+      "judge": {
+        "cut_date": "2024-10-14",
+        "design": {
+          "n": 2067,
+          "pf": 1.58,
+          "win_rate_pct": 33.7,
+          "expectancy_R": 0.3468,
+          "net_R": 716.9,
+          "max_dd_R": -71.8,
+          "sample_verdict": "≥400 عيّنة يُعتمد عليها",
+          "stress_remove_best2_R": 644.72,
+          "stress_remove_best3_R": 622.71,
+          "top3_concentration_pct": 13.1
+        },
+        "blind": {
+          "n": 594,
+          "pf": 1.325,
+          "win_rate_pct": 27.1,
+          "expectancy_R": 0.2153,
+          "net_R": 127.9,
+          "max_dd_R": -77.0,
+          "sample_verdict": "≥400 عيّنة يُعتمد عليها",
+          "stress_remove_best2_R": 25.03,
+          "stress_remove_best3_R": 13.08,
+          "top3_concentration_pct": 89.8
+        },
+        "blind_confirms": true,
+        "verdict": "PASS — الفترة المغلقة تؤكد التصميم",
+        "gate": {
+          "blind_PF>=1.3": true,
+          "blind_trades>=100": true,
+          "blind_trades>=400": true,
+          "survives_best3_removal": true
+        }
+      },
+      "trades_per_month": 24.01,
+      "max_risk_pct": 0.13,
+      "expected_monthly_pct": 0.671,
+      "months_to_8pct": 11.9,
+      "income_25k": 134,
+      "income_200k": 1074
+    }
+  },
+  "robustness": {
+    "2021-01-01": {
+      "n": 1473,
+      "pf": 1.459,
+      "expectancy_R": 0.2861,
+      "max_dd_R": -89.6
+    },
+    "2022-07-01": {
+      "n": 1164,
+      "pf": 1.358,
+      "expectancy_R": 0.2257,
+      "max_dd_R": -89.6
+    },
+    "2023-07-01": {
+      "n": 928,
+      "pf": 1.404,
+      "expectancy_R": 0.2598,
+      "max_dd_R": -89.6
+    },
+    "2024-10-14": {
+      "n": 594,
+      "pf": 1.325,
+      "expectancy_R": 0.2153,
+      "max_dd_R": -77.0
+    },
+    "2025-06-01": {
+      "n": 384,
+      "pf": 1.754,
+      "expectancy_R": 0.4646,
+      "max_dd_R": -35.8
+    }
+  },
+  "cost_stress": {
+    "x1.0": {
+      "n": 594,
+      "pf": 1.325,
+      "win_rate_pct": 27.1,
+      "expectancy_R": 0.2153,
+      "net_R": 127.9,
+      "max_dd_R": -77.0,
+      "sample_verdict": "≥400 عيّنة يُعتمد عليها",
+      "stress_remove_best2_R": 25.03,
+      "stress_remove_best3_R": 13.08,
+      "top3_concentration_pct": 89.8
+    },
+    "x2.0": {
+      "n": 594,
+      "pf": 1.293,
+      "win_rate_pct": 27.1,
+      "expectancy_R": 0.1976,
+      "net_R": 117.4,
+      "max_dd_R": -80.9,
+      "sample_verdict": "≥400 عيّنة يُعتمد عليها",
+      "stress_remove_best2_R": 14.57,
+      "stress_remove_best3_R": 2.63,
+      "top3_concentration_pct": 97.8
+    },
+    "x3.0": {
+      "n": 594,
+      "pf": 1.262,
+      "win_rate_pct": 27.1,
+      "expectancy_R": 0.1799,
+      "net_R": 106.9,
+      "max_dd_R": -84.8,
+      "sample_verdict": "≥400 عيّنة يُعتمد عليها",
+      "stress_remove_best2_R": 4.11,
+      "stress_remove_best3_R": -7.83,
+      "top3_concentration_pct": 107.3
+    }
+  },
+  "correlation": {
+    "avg_pairwise": 0.087,
+    "effective_bets": 10.3,
+    "markets": 34
+  }
+}

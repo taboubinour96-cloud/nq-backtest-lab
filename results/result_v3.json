@@ -1,0 +1,218 @@
+{
+  "R6 · رموز المستودع وحدها": {
+    "name": "R6 · رموز المستودع وحدها",
+    "blind_n": 117,
+    "blind_pf": 1.211,
+    "blind_exp_R": 0.1352,
+    "blind_dd_R": -20.1,
+    "worst_dd_R_allwindows": 21.7,
+    "trades_per_month": 4.78,
+    "max_risk_pct": 0.461,
+    "expected_monthly_pct": 0.298,
+    "months_to_8pct": 26.9,
+    "income_25k": 60,
+    "income_200k": 477,
+    "gates": {
+      "blind_PF>=1.3": false,
+      "blind_trades>=100": true,
+      "blind_trades>=400": false,
+      "survives_best3_removal": false
+    },
+    "gates_passed": 1,
+    "survives_best3_R": -4.72,
+    "win_rate": 29.9,
+    "robustness": {
+      "2021-01-01": 1.938,
+      "2022-07-01": 1.511,
+      "2023-07-01": 1.618,
+      "2024-10-14": 1.211,
+      "2025-06-01": 1.277
+    }
+  },
+  "C12 · كلاسيكي بلا فوركس": {
+    "name": "C12 · كلاسيكي بلا فوركس",
+    "blind_n": 178,
+    "blind_pf": 1.539,
+    "blind_exp_R": 0.3136,
+    "blind_dd_R": -19.5,
+    "worst_dd_R_allwindows": 40.4,
+    "trades_per_month": 7.2,
+    "max_risk_pct": 0.248,
+    "expected_monthly_pct": 0.559,
+    "months_to_8pct": 14.3,
+    "income_25k": 112,
+    "income_200k": 894,
+    "gates": {
+      "blind_PF>=1.3": true,
+      "blind_trades>=100": true,
+      "blind_trades>=400": false,
+      "survives_best3_removal": true
+    },
+    "gates_passed": 3,
+    "survives_best3_R": 17.75,
+    "win_rate": 33.7,
+    "robustness": {
+      "2021-01-01": 1.249,
+      "2022-07-01": 1.334,
+      "2023-07-01": 1.391,
+      "2024-10-14": 1.539,
+      "2025-06-01": 1.759
+    }
+  },
+  "FX8 · فوركس وحده (لماذا استُبعد)": {
+    "name": "FX8 · فوركس وحده (لماذا استُبعد)",
+    "blind_n": 105,
+    "blind_pf": 0.489,
+    "blind_exp_R": -0.3599,
+    "blind_dd_R": -39.3,
+    "worst_dd_R_allwindows": 72.7,
+    "trades_per_month": 4.24,
+    "max_risk_pct": 0.138,
+    "expected_monthly_pct": -0.21,
+    "months_to_8pct": -38.1,
+    "income_25k": -42,
+    "income_200k": -336,
+    "gates": {
+      "blind_PF>=1.3": false,
+      "blind_trades>=100": true,
+      "blind_trades>=400": false,
+      "survives_best3_removal": false
+    },
+    "gates_passed": 1,
+    "survives_best3_R": -49.3,
+    "win_rate": 22.9,
+    "robustness": {
+      "2021-01-01": 0.803,
+      "2022-07-01": 0.595,
+      "2023-07-01": 0.602,
+      "2024-10-14": 0.489,
+      "2025-06-01": 0.562
+    }
+  },
+  "R6+C12 · بلا أي اختيار مني": {
+    "name": "R6+C12 · بلا أي اختيار مني",
+    "blind_n": 295,
+    "blind_pf": 1.401,
+    "blind_exp_R": 0.2428,
+    "blind_dd_R": -22.5,
+    "worst_dd_R_allwindows": 41.2,
+    "trades_per_month": 11.92,
+    "max_risk_pct": 0.243,
+    "expected_monthly_pct": 0.703,
+    "months_to_8pct": 11.4,
+    "income_25k": 141,
+    "income_200k": 1124,
+    "gates": {
+      "blind_PF>=1.3": true,
+      "blind_trades>=100": true,
+      "blind_trades>=400": false,
+      "survives_best3_removal": true
+    },
+    "gates_passed": 3,
+    "survives_best3_R": 33.04,
+    "win_rate": 32.2,
+    "robustness": {
+      "2021-01-01": 1.499,
+      "2022-07-01": 1.401,
+      "2023-07-01": 1.475,
+      "2024-10-14": 1.401,
+      "2025-06-01": 1.565
+    }
+  },
+  "H1 · أعلى5 كريبتو + C12": {
+    "name": "H1 · أعلى5 كريبتو + C12",
+    "blind_n": 276,
+    "blind_pf": 1.448,
+    "blind_exp_R": 0.2702,
+    "blind_dd_R": -21.9,
+    "worst_dd_R_allwindows": 33.9,
+    "trades_per_month": 11.16,
+    "max_risk_pct": 0.295,
+    "expected_monthly_pct": 0.889,
+    "months_to_8pct": 9.0,
+    "income_25k": 178,
+    "income_200k": 1423,
+    "gates": {
+      "blind_PF>=1.3": true,
+      "blind_trades>=100": true,
+      "blind_trades>=400": false,
+      "survives_best3_removal": true
+    },
+    "gates_passed": 3,
+    "survives_best3_R": 35.98,
+    "win_rate": 31.5,
+    "robustness": {
+      "2021-01-01": 1.471,
+      "2022-07-01": 1.448,
+      "2023-07-01": 1.49,
+      "2024-10-14": 1.448,
+      "2025-06-01": 1.658
+    }
+  },
+  "C24 + C12 · توسّع أفقي": {
+    "name": "C24 + C12 · توسّع أفقي",
+    "blind_n": 591,
+    "blind_pf": 1.162,
+    "blind_exp_R": 0.1028,
+    "blind_dd_R": -63.3,
+    "worst_dd_R_allwindows": 69.7,
+    "trades_per_month": 23.89,
+    "max_risk_pct": 0.143,
+    "expected_monthly_pct": 0.352,
+    "months_to_8pct": 22.7,
+    "income_25k": 70,
+    "income_200k": 564,
+    "gates": {
+      "blind_PF>=1.3": false,
+      "blind_trades>=100": true,
+      "blind_trades>=400": true,
+      "survives_best3_removal": true
+    },
+    "gates_passed": 3,
+    "survives_best3_R": 22.15,
+    "win_rate": 30.1,
+    "robustness": {
+      "2021-01-01": 1.454,
+      "2022-07-01": 1.284,
+      "2023-07-01": 1.335,
+      "2024-10-14": 1.162,
+      "2025-06-01": 1.383
+    }
+  },
+  "diagnosis_by_asset_class": {
+    "index_blind": {
+      "n": 99,
+      "mean_R": 0.269
+    },
+    "commodity_blind": {
+      "n": 79,
+      "mean_R": 0.37
+    },
+    "fx_blind": {
+      "n": 105,
+      "mean_R": -0.36
+    }
+  },
+  "diagnosis_by_liquidity_rank": {
+    "1-5": {
+      "markets": 5,
+      "trades": 98,
+      "mean_R": 0.191
+    },
+    "6-12": {
+      "markets": 7,
+      "trades": 99,
+      "mean_R": -0.158
+    },
+    "13-24": {
+      "markets": 12,
+      "trades": 216,
+      "mean_R": 0.008
+    },
+    "25-48": {
+      "markets": 24,
+      "trades": 395,
+      "mean_R": -0.055
+    }
+  }
+}

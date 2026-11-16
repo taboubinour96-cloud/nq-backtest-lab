@@ -1,0 +1,31 @@
+{
+  "cut_date": "2024-10-14",
+  "rule": "every instrument a prop firm actually offers, from 3 families, with >=15 years of daily data on Yahoo; no performance-based selection",
+  "families": {
+    "index": 7,
+    "commodity": 5,
+    "fx": 8
+  },
+  "symbols": [
+    "^NDX",
+    "^GSPC",
+    "^DJI",
+    "^RUT",
+    "^GDAXI",
+    "^FTSE",
+    "^N225",
+    "GC=F",
+    "SI=F",
+    "CL=F",
+    "NG=F",
+    "HG=F",
+    "EURUSD=X",
+    "GBPUSD=X",
+    "USDJPY=X",
+    "AUDUSD=X",
+    "USDCAD=X",
+    "USDCHF=X",
+    "NZDUSD=X",
+    "EURJPY=X"
+  ]
+}
