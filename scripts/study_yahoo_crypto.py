@@ -24,6 +24,9 @@ import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).parent
+# يبحث عن البيانات في: نفس المجلد، أو ../data، أو ./data
+DATA_DIR = next((p for p in (HERE, HERE.parent / "data", HERE / "data")
+                             if (p / "universe_final.csv").is_file()), HERE.parent / "data")
 sys.path.insert(0, str(HERE))
 import data_yahoo_crypto as YC
 import engine as E
@@ -71,16 +74,21 @@ def report(tr: list[dict], label: str) -> dict:
 
 
 def main() -> int:
-    fam = dict(zip(*[pd.read_csv(HERE / "classic_universe.csv")[c]
+    fam = dict(zip(*[pd.read_csv(DATA_DIR / "classic_universe.csv")[c]
                      for c in ("symbol", "family")]))
-    cl12 = sorted([t for t in pd.read_csv(HERE / "trades_classic.csv").to_dict("records")
+    cl12 = sorted([t for t in pd.read_csv(DATA_DIR / "trades_classic.csv").to_dict("records")
                    if fam[t["market"]] in ("index", "commodity")], key=lambda t: t["exit_date"])
 
     d6 = load(REPO6)
     d22 = load(LONG_HISTORY)
-    pd.DataFrame([{"symbol": f"{c}-USD", "first_bar": str(load([c])[f'{c}USDT'].DateTime.min().date())
-                   if f"{c}USDT" in load([c]) else None} for c in LONG_HISTORY]
-                 ).to_csv(HERE / "crypto_yahoo_universe.csv", index=False)
+    rows = []
+    for c in LONG_HISTORY:
+        df = d22.get(f"{c}USDT")
+        if df is not None and len(df):
+            rows.append({"symbol": f"{c}-USD", "bars": len(df),
+                         "first_bar": str(df.DateTime.min().date()),
+                         "last_bar": str(df.DateTime.max().date())})
+    pd.DataFrame(rows).to_csv(DATA_DIR / "crypto_yahoo_universe.csv", index=False)
 
     out = {}
     print("=== الكريبتو من Yahoo، نفس قواعد المستودع ===")

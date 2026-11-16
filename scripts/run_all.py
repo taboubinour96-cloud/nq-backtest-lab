@@ -22,6 +22,9 @@ import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).parent
+# يبحث عن البيانات في: نفس المجلد، أو ../data، أو ./data
+DATA_DIR = next((p for p in (HERE, HERE.parent / "data", HERE / "data")
+                             if (p / "universe_final.csv").is_file()), HERE.parent / "data")
 sys.path.insert(0, str(HERE))
 
 import data_free as D

@@ -19,6 +19,9 @@ import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).parent
+# يبحث عن البيانات في: نفس المجلد، أو ../data، أو ./data
+DATA_DIR = next((p for p in (HERE, HERE.parent / "data", HERE / "data")
+                             if (p / "universe_final.csv").is_file()), HERE.parent / "data")
 sys.path.insert(0, str(HERE))
 import data_free as D
 import engine as E
@@ -60,14 +63,14 @@ def evaluate(tr, name):
 
 
 def main() -> int:
-    fam = dict(zip(*[pd.read_csv(HERE / "classic_universe.csv")[c]
+    fam = dict(zip(*[pd.read_csv(DATA_DIR / "classic_universe.csv")[c]
                      for c in ("symbol", "family")]))
-    cl_all = pd.read_csv(HERE / "trades_classic.csv").to_dict("records")
+    cl_all = pd.read_csv(DATA_DIR / "trades_classic.csv").to_dict("records")
     cl12 = sorted([t for t in cl_all if fam[t["market"]] in ("index", "commodity")],
                   key=lambda t: t["exit_date"])
     fx = sorted([t for t in cl_all if fam[t["market"]] == "fx"], key=lambda t: t["exit_date"])
 
-    u = pd.read_csv(HERE / "universe_final.csv")
+    u = pd.read_csv(DATA_DIR / "universe_final.csv")
     top5 = list(u.symbol[:5])
     repo6 = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT", "DOGEUSDT"]
 
